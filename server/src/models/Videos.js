@@ -15,8 +15,8 @@ const VideoSchema = mongoose.Schema({
     },
     liked: {
         type: Boolean,
-        default: true
-    },
+        default: true 
+    },  
 });
 
 module.exports = mongoose.model("Video", VideoSchema);
