@@ -7,7 +7,7 @@ export default function Video({id, title, link, liked}) {
        <li>
         <Container>
             <Title>{title}</Title>
-            <Link>{link}</Link>
+            <Link href={link}>{link}</Link>
             <ButtonArea>
                 <Button>
                     <LikeIcon liked={liked}/>

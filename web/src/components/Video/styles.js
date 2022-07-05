@@ -21,10 +21,16 @@ items-center
 
 export const Title = tw.h1`
 font-bold
-text-2xl
+text-lg
+text-center
+max-w-[230px]
+
+whitespace-wrap
+overflow-hidden
+text-ellipsis
 `;
 
-export const Link = tw.span`
+export const Link = tw.a`
 border-l-2
 border-l-zinc-500
 max-w-[230px]
