@@ -1,8 +1,12 @@
-import {IoTrashBin} from "react-icons/io5"
+import { useContext } from "react";
+
+import {VideoContext} from "../../contexts/VideoContext"
 
 import { Container, Title, Link, ButtonArea, Button, LikeIcon, EditIcon, DeleteIcon } from "./styles.js";
 
-export default function Video({id, title, link, liked}) {
+export default function Video({_id, title, link, liked}) {
+    const {handleEdit, handleDelete, handleLiked} = useContext(VideoContext)
+
     return(
        <li>
         <Container>
@@ -10,13 +14,13 @@ export default function Video({id, title, link, liked}) {
             <Link href={link}>{link}</Link>
             <ButtonArea>
                 <Button>
-                    <LikeIcon liked={liked}/>
+                    <LikeIcon liked={liked} onClick={() => [handleLiked(_id), console.log(liked)]}/>
                 </Button>
-                <Button>
+                <Button onClick={() => handleEdit(_id, title, link)}>
                     <EditIcon/>
                 </Button>
                 <Button>
-                    <DeleteIcon/>
+                    <DeleteIcon onClick={() => handleDelete(_id)}/>
                 </Button>
             </ButtonArea>
         </Container>

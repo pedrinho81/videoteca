@@ -32,6 +32,7 @@ text-ellipsis
 
 export const Link = tw.a`
 border-l-2
+pl-1
 border-l-zinc-500
 max-w-[230px]
 text-zinc-500
@@ -62,7 +63,7 @@ hover:text-zinc-500
 `;
 
 export const LikeIcon = tw(IoThumbsUp)`
-    ${({liked}) => (liked ? "text-blue-800" : "text-black")}
+    ${({liked}) => (liked ? "text-black" : "text-blue-800")}
     w-6
     h-6
 `;

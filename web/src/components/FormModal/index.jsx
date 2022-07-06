@@ -30,7 +30,7 @@ export default function FormModal() {
                         <CloseIcon />
                     </button>
                 </Header>
-                <FormContainer onSubmit={handleSubmit}>
+                <FormContainer onSubmit={handleSubmit}> 
                     <FormMain>
                         <InputGroup>
                             <label htmlFor="title">Title</label>
